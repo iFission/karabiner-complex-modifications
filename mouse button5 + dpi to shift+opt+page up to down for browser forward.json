@@ -1,0 +1,26 @@
+{
+  "title": "mouse button5 + dpi to shift+opt+page up to down for browser forward",
+  "rules": [
+    {
+      "description": "mouse button5 + dpi to shift+opt+page up to down for browser forward",
+      "manipulators": [
+        {
+          "from": {
+            "modifiers": {
+              "mandatory": ["right_shift", "left_alt"],
+              "optional": ["any"]
+            },
+            "key_code": "page_up"
+          },
+          "to": [
+            {
+              "key_code": "page_down",
+              "modifiers": ["left_alt"]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}

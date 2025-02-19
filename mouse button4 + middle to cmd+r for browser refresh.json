@@ -1,0 +1,37 @@
+{
+  "title": "mouse button4 + middle to cmd+r for browser refresh",
+  "rules": [
+    {
+      "description": "mouse button4 + middle to cmd+r for browser refresh",
+      "manipulators": [
+        {
+          "conditions": [
+            {
+              "name": "modifier_button4",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "modifiers": {
+              "mandatory": [],
+              "optional": [
+                "any"
+              ]
+            },
+            "pointing_button": "button3"
+          },
+          "to": [
+            {
+              "key_code": "r",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}

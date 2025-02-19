@@ -1,0 +1,28 @@
+{
+  "title": "opt right to left click",
+  "rules": [
+    {
+      "description": "opt right to left click",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "right_option",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": {
+            "pointing_button": "button1",
+            "lazy": true
+          },
+          "to_if_alone": [
+            {
+              "key_code": "right_option"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}

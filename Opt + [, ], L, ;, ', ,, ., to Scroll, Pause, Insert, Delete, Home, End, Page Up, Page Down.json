@@ -1,0 +1,160 @@
+{
+  "title": "Opt Right + P, [, ], L, ;, ', ,, ., to Print, Scroll, Pause, Insert, Delete, Home, End, Page Up, Page Down",
+  "rules": [
+    {
+      "description": "Opt Right + P, [, ], L, ;, ', ,, ., to Print, Scroll, Pause, Insert, Delete, Home, End, Page Up, Page Down",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "p",
+            "modifiers": {
+              "mandatory": ["right_option"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "print_screen"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "open_bracket",
+            "modifiers": {
+              "mandatory": ["right_option"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "scroll_lock"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "close_bracket",
+            "modifiers": {
+              "mandatory": ["right_option"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "pause"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "mandatory": ["right_option"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "power"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": ["right_option"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "insert"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": {
+              "mandatory": ["right_option"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "home"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "quote",
+            "modifiers": {
+              "mandatory": ["right_option"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "page_up"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "comma",
+            "modifiers": {
+              "mandatory": ["right_option"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_forward"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "period",
+            "modifiers": {
+              "mandatory": ["right_option"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "end"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "slash",
+            "modifiers": {
+              "mandatory": ["right_option"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "page_down"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

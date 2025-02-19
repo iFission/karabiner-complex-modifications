@@ -1,0 +1,94 @@
+{
+  "title": "cmd 1:shift:2:3 to cmd [:]:ctrl shift tab:ctrl tab",
+  "rules": [
+    {
+      "description": "cmd 1:shift:2:3 to cmd [:]:ctrl shift tab:ctrl tab",
+      "manipulators": [
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": ["com.apple.finder", "com.apple.iCal"],
+              "type": "frontmost_application_unless"
+            }
+          ],
+          "type": "basic",
+          "from": {
+            "key_code": "1",
+            "modifiers": {
+              "mandatory": ["left_command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "open_bracket",
+              "modifiers": ["left_command"]
+            }
+          ]
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": ["com.apple.finder", "com.apple.iCal"],
+              "type": "frontmost_application_unless"
+            }
+          ],
+          "type": "basic",
+          "from": {
+            "key_code": "1",
+            "modifiers": {
+              "mandatory": ["left_shift", "left_command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "close_bracket",
+              "modifiers": ["left_command"]
+            }
+          ]
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": ["com.apple.finder", "com.apple.iCal"],
+              "type": "frontmost_application_unless"
+            }
+          ],
+          "type": "basic",
+          "from": {
+            "key_code": "2",
+            "modifiers": {
+              "mandatory": ["left_command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": ["left_shift", "left_control"]
+            }
+          ]
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": ["com.apple.finder", "com.apple.iCal"],
+              "type": "frontmost_application_unless"
+            }
+          ],
+          "type": "basic",
+          "from": {
+            "key_code": "3",
+            "modifiers": {
+              "mandatory": ["left_command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": ["left_control"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

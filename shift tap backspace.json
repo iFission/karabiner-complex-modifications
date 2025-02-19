@@ -1,0 +1,28 @@
+{
+  "title": "shift tap backspace",
+  "rules": [
+    {
+      "description": "shift tap backspace",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "left_shift",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": {
+            "key_code": "left_shift",
+            "lazy": true
+          },
+          "to_if_alone": [
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}

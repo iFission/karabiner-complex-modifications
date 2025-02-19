@@ -1,0 +1,40 @@
+{
+  "title": "mouse button4+button5 + middle to shift+cmd+t for browser undo close tab",
+  "rules": [
+    {
+      "description": "mouse button4+button5 + middle to shift+cmd+t for browser undo close tab",
+      "manipulators": [
+        {
+          "conditions": [
+            {
+              "name": "modifier_button4",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "right_shift"
+              ],
+              "optional": [
+                "any"
+              ]
+            },
+            "pointing_button": "button3"
+          },
+          "to": [
+            {
+              "key_code": "t",
+              "modifiers": [
+                "left_shift",
+                "left_command"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}

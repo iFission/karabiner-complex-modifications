@@ -1,0 +1,144 @@
+{
+  "title": "mouse left/right to f1/f2",
+  "rules": [
+    {
+      "description": "mouse left/right to f1/f2",
+      "manipulators": [
+        {
+          "conditions": [
+            {
+              "name": "modifier_button2",
+              "type": "variable_if",
+              "value": 0
+            },
+            {
+              "name": "modifier_button4",
+              "type": "variable_if",
+              "value": 0
+            }
+          ],
+          "from": {
+            "modifiers": {
+              "mandatory": [],
+              "optional": [
+                "any"
+              ]
+            },
+            "pointing_button": "button1"
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "modifier_button1",
+                "value": 1
+              }
+            },
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "modifier_button1",
+                "value": 0
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "modifier_button1",
+              "type": "variable_if",
+              "value": 0
+            },
+            {
+              "name": "modifier_button4",
+              "type": "variable_if",
+              "value": 0
+            }
+          ],
+          "from": {
+            "modifiers": {
+              "mandatory": [],
+              "optional": [
+                "any"
+              ]
+            },
+            "pointing_button": "button2"
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "modifier_button2",
+                "value": 1
+              }
+            },
+            {
+              "pointing_button": "button2"
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "modifier_button2",
+                "value": 0
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "modifier_button1",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "modifiers": {
+              "mandatory": [],
+              "optional": [
+                "any"
+              ]
+            },
+            "pointing_button": "button2"
+          },
+          "to": [
+            {
+              "key_code": "f2"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "modifier_button2",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "modifiers": {
+              "mandatory": [],
+              "optional": [
+                "any"
+              ]
+            },
+            "pointing_button": "button1"
+          },
+          "to": [
+            {
+              "key_code": "f1"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}

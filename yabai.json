@@ -1,0 +1,102 @@
+{
+  "title": "yabai",
+  "rules": [
+    {
+      "description": "f1:f2 space_focus",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f1"
+          },
+          "to": [
+            {
+              "shell_command": "/bin/sh ~/.config/yabai/space_focus_left.sh"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f2"
+          },
+          "to": [
+            {
+              "shell_command": "/bin/sh ~/.config/yabai/space_focus_right.sh"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "1",
+            "modifiers": {
+              "mandatory": ["left_option"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/bin/sh ~/.config/yabai/space_focus_left.sh"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "2",
+            "modifiers": {
+              "mandatory": ["left_option"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/bin/sh ~/.config/yabai/space_focus_right.sh"
+            }
+          ]
+        },
+        {
+          "conditions": [
+            {
+              "name": "modifier_button2",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "modifiers": {
+              "mandatory": []
+            },
+            "pointing_button": "button1"
+          },
+          "to": [
+            {
+              "shell_command": "/bin/sh ~/.config/yabai/space_focus_left.sh"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "modifier_button1",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "modifiers": {
+              "mandatory": []
+            },
+            "pointing_button": "button2"
+          },
+          "to": [
+            {
+              "shell_command": "/bin/sh ~/.config/yabai/space_focus_right.sh"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}

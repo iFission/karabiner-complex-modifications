@@ -1,0 +1,21 @@
+{
+  "title": "Mute to Backspace",
+  "rules": [
+    {
+      "description": "Mute to Backspace",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "consumer_key_code": "mute"
+          },
+          "to": [
+            {
+              "key_code": "up_arrow"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

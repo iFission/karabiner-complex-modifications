@@ -1,0 +1,92 @@
+{
+  "title": "mouse button4 + left/right to home:end",
+  "rules": [
+    {
+      "description": "mouse button4 + left/right to home:end",
+      "manipulators": [
+        {
+          "from": {
+            "modifiers": {
+              "mandatory": [],
+              "optional": [
+                "any"
+              ]
+            },
+            "pointing_button": "button4"
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "modifier_button4",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "modifier_button4",
+                "value": 0
+              }
+            }
+          ],
+          "to_if_alone": [
+            {
+              "pointing_button": "button4",
+              "lazy": true
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "modifier_button4",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "modifiers": {
+              "mandatory": [],
+              "optional": [
+                "any"
+              ]
+            },
+            "pointing_button": "button1"
+          },
+          "to": [
+            {
+              "key_code": "home"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "modifier_button4",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "modifiers": {
+              "mandatory": [],
+              "optional": [
+                "any"
+              ]
+            },
+            "pointing_button": "button2"
+          },
+          "to": [
+            {
+              "key_code": "end"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}

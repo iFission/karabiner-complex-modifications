@@ -1,0 +1,166 @@
+{
+  "title": "mouse button4 + left/right to opt+page up/down for browser back/forward",
+  "rules": [
+    {
+      "description": "mouse button4 + left/right to opt+page up/down for browser back/forward",
+      "manipulators": [
+        {
+          "from": {
+            "modifiers": {
+              "mandatory": [],
+              "optional": [
+                "any"
+              ]
+            },
+            "pointing_button": "button4"
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "modifier_button4",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "modifier_button4",
+                "value": 0
+              }
+            }
+          ],
+          "to_if_alone": [
+            {
+              "pointing_button": "button4",
+              "lazy": true
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "modifier_button4",
+              "type": "variable_if",
+              "value": 1
+            },
+            {
+              "bundle_identifiers": [
+                "com.citrix.receiver.icaviewer.mac"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "modifiers": {
+              "mandatory": [],
+              "optional": [
+                "any"
+              ]
+            },
+            "pointing_button": "button1"
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "left_option",
+                "left_command"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "modifier_button4",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "modifiers": {
+              "mandatory": [],
+              "optional": [
+                "any"
+              ]
+            },
+            "pointing_button": "button1"
+          },
+          "to": [
+            {
+              "key_code": "page_up",
+              "modifiers": [
+                "left_alt"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "modifier_button4",
+              "type": "variable_if",
+              "value": 1
+            },
+            {
+              "bundle_identifiers": [
+                "com.citrix.receiver.icaviewer.mac"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "modifiers": {
+              "mandatory": [],
+              "optional": [
+                "any"
+              ]
+            },
+            "pointing_button": "button2"
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_option",
+                "left_command"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "modifier_button4",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "modifiers": {
+              "mandatory": [],
+              "optional": [
+                "any"
+              ]
+            },
+            "pointing_button": "button2"
+          },
+          "to": [
+            {
+              "key_code": "page_down",
+              "modifiers": [
+                "left_alt"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}

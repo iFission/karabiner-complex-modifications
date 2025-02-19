@@ -1,0 +1,51 @@
+{
+  "title": "shift mouse drag scroll",
+  "rules": [
+    {
+      "description": "shift mouse drag scroll",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "left_shift",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to_if_held_down": [
+            {
+              "set_variable": {
+                "name": "drag_scroll_mode",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "drag_scroll_mode",
+                "value": 0
+              }
+            }
+          ],
+
+          "type": "basic"
+        },
+        {
+          "type": "mouse_motion_to_scroll",
+          "from": {
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "drag_scroll_mode",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
